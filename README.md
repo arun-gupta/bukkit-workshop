@@ -1,4 +1,2 @@
-bukkit-workshop
-===============
-
-Bukkit Plugins for Minecraft Modding Workshop
+Bukkit Workshop for Minecraft Modding
+=====================================
