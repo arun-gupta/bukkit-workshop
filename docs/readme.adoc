@@ -1,25 +1,27 @@
-## Level 1 Mods
-   - Start with an archetype or better go with a template directory
-   -- onEnable will type a log message in game console
-   - New command: spawn NN flaming pigs where you are, on fire for 30 secs, die afterwards
-   - Event handler: When an entity dies by fire, lightning will strike
-   - Weather API: need to figure out what would be an interesting use case here
-   - Weather sequence: Makes it rain for 30 secs, thunder for 30 secs, clear for 30 secs ??? (can be easily done already)
-   - Place TNT, put leaves on it, replaces it with a creeper @BlockPlaceEvent
+Level 1 Mods
+------------
+- Start with an archetype or better go with a template directory
+-- onEnable will type a log message in game console
+- New command: spawn NN flaming pigs where you are, on fire for 30 secs, die afterwards
+- Event handler: When an entity dies by fire, lightning will strike
+- Weather API: need to figure out what would be an interesting use case here
+- Weather sequence: Makes it rain for 30 secs, thunder for 30 secs, clear for 30 secs ??? (can be easily done already)
+- Place TNT, put leaves on it, replaces it with a creeper @BlockPlaceEvent
 
-## Level 2 Mods
-   - Multiple events: PlayerInteractEvent
-   - Zombies drop bones and rotten flesh when killed
-   - Add a new crafting recipe
-   - If a sponge is powered then it absorbs water
-   - Hit the ground with a golden shovel, it creates a little house (using code)
-   - Throw eggs, where it lands a chance of spawning something else (use random and switch statements) control how the egg is thrown and what hatches, including number of hatches
-   - Right click zombie with a stick then there is 1/8 chance of getting a diamond
-   -
-      -- add a command to enable/disable it
-      -- send a message to all players that the player got a diamond
+Level 2 Mods
+------------
+- Multiple events: PlayerInteractEvent
+- Zombies drop bones and rotten flesh when killed
+- Add a new crafting recipe
+- If a sponge is powered then it absorbs water
+- Hit the ground with a golden shovel, it creates a little house (using code)
+- Throw eggs, where it lands a chance of spawning something else (use random and switch statements) control how the egg is thrown and what hatches, including number of hatches
+- Right click zombie with a stick then there is 1/8 chance of getting a diamond
+-
+-- add a command to enable/disable it
+-- send a message to all players that the player got a diamond
 
-## Level 3 Mods
-
+Level 3 Mods
+------------
 - If you get bit by a zombie then you continuously get damaged until you eat cake. If you don’t eat cake and die then a zombie is spawned.
 
