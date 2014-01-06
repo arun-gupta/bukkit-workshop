@@ -1,6 +1,7 @@
 Starting a new Bukkit plugin
 ============================
 This plugin template has everything you need to start a fresh plugin project. To start a new project, follow the following steps:
+
 1. Copy this directory and open pom.xml in your IDE.
 2. Update the `<groupId>` and `<artifactId>` sections of pom.xml with your name and your plugin's name.
 3. Change the package name for the `PluginMain` class to reflect your name and your plugin's name.
