@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Project name - update this -->
-    <groupId>com.yourname</groupId>
+    <groupId>org.devoxx4kids.bukkit.yourname</groupId>
     <artifactId>yourPluginName</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -27,5 +27,5 @@
             <type>jar</type>
         </dependency>
     </dependencies>
-
 </project>
+

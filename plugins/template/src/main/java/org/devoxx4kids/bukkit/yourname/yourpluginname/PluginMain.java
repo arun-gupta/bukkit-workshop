@@ -1,4 +1,4 @@
-package com.yourname.yourpluginname;
+package org.devoxx4kids.bukkit.yourname.yourpluginname;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
