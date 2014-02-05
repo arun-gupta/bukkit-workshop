@@ -16,8 +16,12 @@ public class MyPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("MyPlugin.onEnable()");
-        getServer().getPluginManager().registerEvents(new CraftingListener(), this);
-        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.POTATO_ITEM, 1)).shape("ded", "lnl", "ded").setIngredient('d', Material.DIAMOND).setIngredient('e', Material.EMERALD).setIngredient('l', Material.LAPIS_BLOCK).setIngredient('n', Material.NETHER_STAR);
+        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.POTATO_ITEM, 1))
+                .shape("ded", "lnl", "ded")
+                .setIngredient('d', Material.DIAMOND)
+                .setIngredient('e', Material.EMERALD)
+                .setIngredient('l', Material.LAPIS_BLOCK)
+                .setIngredient('n', Material.NETHER_STAR);
         getServer().addRecipe(recipe);
     }
 
