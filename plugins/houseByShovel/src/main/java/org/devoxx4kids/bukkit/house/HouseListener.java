@@ -158,7 +158,7 @@ public class HouseListener implements Listener {
             block = world.getBlockAt(x - 1, y + 1, z + 5);
             block.setType(Material.BREWING_STAND);
             block = world.getBlockAt(x - 2, y + 1, z + 5);
-            block.setType(Material.ENCHANTMENT_TABLE);
+            block.setType(Material.WORKBENCH);
         }
     }
 }
