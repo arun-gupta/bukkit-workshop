@@ -1,4 +1,4 @@
-name: lightningByFIre
+name: lightningByFire
 version: "1.0-SNAPSHOT"
 author: Aditya Gupta
 main: org.devoxx4kids.bukkit.lightning.MyPlugin
