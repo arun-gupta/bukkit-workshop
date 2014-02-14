@@ -1,7 +1,7 @@
 /**
  * Copyright: Aditya Gupta
  */
-package org.devoxx4kids.bukkit.sponge;
+package org.devoxx4kids.bukkit.plugins.sponge;
 
 import org.bukkit.Material;
 import org.bukkit.World;

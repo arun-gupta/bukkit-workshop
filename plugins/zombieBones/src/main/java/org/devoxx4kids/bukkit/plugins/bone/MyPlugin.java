@@ -1,24 +1,25 @@
-package org.devoxx4kids.bukkit.lightning;
+package org.devoxx4kids.bukkit.plugins.bone;
 
+import java.util.logging.Level;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
     // This code is called only once after the server starts
     @Override
     public void onLoad() {
-        getLogger().info("MyPlugin.onLoad()"); 
+        getLogger().log(Level.INFO, "{0}.onLoad()", this.getClass().getName());
     }
 
     // This code is called after the server starts and after the /reload command
     @Override
     public void onEnable() {
-        getLogger().info("MyPlugin.onEnable()");
-        getServer().getPluginManager().registerEvents(new LightningListener(), this);
+        getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
+        getServer().getPluginManager().registerEvents(new BoneListener(), this);
     }
 
     // This code is called before the server stops and after the /reload command
     @Override
     public void onDisable() {
-        getLogger().info("MyPlugin.onDisable()");
+        getLogger().log(Level.INFO, "{0}.onDisable()", this.getClass().getName());
     }
 }

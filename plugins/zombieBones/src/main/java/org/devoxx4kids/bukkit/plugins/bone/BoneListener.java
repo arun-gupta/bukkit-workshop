@@ -1,7 +1,7 @@
 /**
  * Copyright: Aditya Gupta
  */
-package org.devoxx4kids.bukkit.bone;
+package org.devoxx4kids.bukkit.plugins.bone;
 
 import java.util.Random;
 import org.bukkit.Location;

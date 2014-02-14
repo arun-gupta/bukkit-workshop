@@ -1,7 +1,7 @@
 /**
  * Copyright: Aditya Gupta
  */
-package org.devoxx4kids.bukkit.creeper;
+package org.devoxx4kids.bukkit.plugins.creeper;
 
 import org.bukkit.Location;
 import org.bukkit.Material;

@@ -4,28 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.devoxx4kids.bukkit.plugins</groupId>
+        <artifactId>plugin-samples</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
     <!-- Project name - update this -->
-    <groupId>org.devoxx4kids.bukkit.yourname</groupId>
     <artifactId>yourPluginName</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <!-- Repositories -->
-    <repositories>
-        <repository>
-            <id>bukkit-repo</id>
-            <url>http://repo.bukkit.org/content/groups/public/</url>
-        </repository>
-    </repositories>
-
-    <!-- Dependencies -->
-    <dependencies>
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>craftbukkit</artifactId>
-            <version>1.7.2-R0.2</version>
-            <scope>provided</scope>
-            <type>jar</type>
-        </dependency>
-    </dependencies>
 </project>
 

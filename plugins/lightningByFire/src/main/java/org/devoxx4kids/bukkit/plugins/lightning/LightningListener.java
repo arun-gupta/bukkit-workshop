@@ -1,7 +1,7 @@
 /**
  * Copyright: Aditya Gupta
  */
-package org.devoxx4kids.bukkit.lightning;
+package org.devoxx4kids.bukkit.plugins.lightning;
 
 import org.bukkit.Location;
 import org.bukkit.World;
