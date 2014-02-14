@@ -1,0 +1,8 @@
+name: FlamingPigs
+version: "1.0-SNAPSHOT"
+author: Arun Gupta
+main: org.devoxx4kids.bukkit.plugins.pigs.MyPlugin
+commands:
+   pigsOnFire:
+      description: spawn NN flaming pigs where you are, on fire for 10 secs, die afterwards.
+      usage: /pigsOnFire [how many]
