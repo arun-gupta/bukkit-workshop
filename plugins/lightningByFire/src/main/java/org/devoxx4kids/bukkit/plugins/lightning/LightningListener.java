@@ -18,13 +18,13 @@ import org.bukkit.event.entity.EntityDeathEvent;
 public class LightningListener implements Listener{
     
     @EventHandler
-    public void lightningByFire(EntityDeathEvent event){
+    public void lightningByFire(EntityDeathEvent event) throws InterruptedException{
             Entity entity = event.getEntity();
             Location location = entity.getLocation();
             World world = entity.getWorld();
-            EntityDamageEvent x = entity.getLastDamageCause();
+            EntityDamageEvent entitydamageevent = entity.getLastDamageCause();
             
-            if(x.getCause() == DamageCause.LAVA || x.getCause() == DamageCause.FIRE || x.getCause() == DamageCause.FIRE_TICK){
+            if(entitydamageevent.getCause() == DamageCause.LAVA || entitydamageevent.getCause() == DamageCause.FIRE || entitydamageevent.getCause() == DamageCause.FIRE_TICK){
                 world.strikeLightningEffect(location);
             }
     }
