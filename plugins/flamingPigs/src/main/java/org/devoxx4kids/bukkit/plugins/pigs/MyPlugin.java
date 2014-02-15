@@ -8,6 +8,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
@@ -26,7 +28,7 @@ public class MyPlugin extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (cmd.getName().equals("pigsOnFire")) {
+        if (cmd.getName().equals("flamingpigs")) {
             if (!(sender instanceof Player)) {
                 return false;
             }
@@ -34,28 +36,24 @@ public class MyPlugin extends JavaPlugin {
             Location location = ((Player) sender).getLocation();
 
             if (args.length != 1) {
-                sender.sendMessage("Usage: /pigsOnFire howMany");
+                sender.sendMessage("Usage: /flamingpigs <number of pigs to spawn>");
             }
 
-            int number = Integer.parseInt(args[0]);
+            int numberOfPigs = Integer.parseInt(args[0]);
 
-            for (int i = 0; i < number; i++) {
-                Entity pig = Bukkit
-                        .getWorld("World")
-                        .spawnEntity(
-                                location.add(1.0 * i, 0, 0), 
-                                EntityType.PIG);
-                
-                // TODO: Need to figure out how to make the pigs die
-                pig.setFireTicks(2 * (i+1));
-                pig.setTicksLived(2 * (i+1));
+            for(int i = 0; i < numberOfPigs; i++){
+                Entity pig = Bukkit.getWorld("World").spawnEntity(location, EntityType.PIG);
+                pig.setFireTicks(600);
+                if(pig.isDead()){
+                    EntityDamageEvent entitydamageevent = pig.getLastDamageCause();
+                    entitydamageevent.setCancelled(true);
+                    pig.setFallDistance(100);
+                }
             }
             
-            // doSomething
             return true;
+        }else{
+            return false;
         }
-        //If this has happened the function will return true. 
-        // If this hasn't happened the a value of false will be returned.
-        return false;
     }
 }
