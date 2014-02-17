@@ -1,0 +1,8 @@
+name: slotMachine
+version: "1.0-SNAPSHOT"
+author: Aditya Gupta
+main: org.devoxx4kids.bukkit.plugins.slots.MyPlugin
+commands:
+   bal:
+      description: check how much money you have, bal is short for balance.
+      usage: /bal
