@@ -5,7 +5,7 @@
 1. (DONE) New command: spawn NN flaming pigs where you are, on fire for 30 secs, die afterwards
 1. (DONE) Event handler: When an entity dies by fire, lightning will strike
 1. (DONE) Place TNT, put leaves on it, replaces it with a creeper @BlockPlaceEvent
-1. (IN PROGRESS) Teleport all the players to your existing location
+1. (DONE) Teleport all the players to your existing location
 
 Level 2 Mods
 ------------
@@ -13,7 +13,7 @@ Level 2 Mods
 1. (DONE) Command to create a tower of different materials where ever the player is
 1. (DONE) Zombies drop bones and rotten flesh when killed
 1. (DONE) Add a new crafting recipe
-1. (IN PROGRESS) If a sponge is powered then it absorbs water
+1. (DONE) If a sponge is powered then it absorbs water
 1. (DONE) Hit the ground with a golden shovel, it creates a little house (using code)
 1. (DONE) Throw eggs, where it lands a chance of spawning something else (use random and switch statements) control how the egg is thrown and what hatches, including number of hatches
 1. Right click zombie with a stick then there is 1/8 chance of getting a diamond
