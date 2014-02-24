@@ -1,16 +1,14 @@
-package org.devoxx4kids.bukkit.plugins.pigs;
+package org.devoxx4kids.bukkit.plugins.teleport;
 
-import java.util.logging.Level;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Entity;
-import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
+import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.List;
+import java.util.logging.Level;
 
 public class MyPlugin extends JavaPlugin {
 
@@ -28,27 +26,16 @@ public class MyPlugin extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (cmd.getName().equals("flamingpigs")) {
+        if (cmd.getName().equals("teleportall")) {
             if (!(sender instanceof Player)) {
                 return false;
             }
 
             Location location = ((Player) sender).getLocation();
+            List<Player> players = location.getWorld().getPlayers();
 
-            if (args.length != 1) {
-                sender.sendMessage("Usage: /flamingpigs <number of pigs to spawn>");
-            }
-
-            int numberOfPigs = Integer.parseInt(args[0]);
-
-            for(int i = 0; i < numberOfPigs; i++){
-                Entity pig = Bukkit.getWorld("World").spawnEntity(location, EntityType.PIG);
-                pig.setFireTicks(600);
-                if(pig.isDead()){
-                    EntityDamageEvent entitydamageevent = pig.getLastDamageCause();
-                    entitydamageevent.setCancelled(true);
-                    pig.setFallDistance(100);
-                }
+            for(Player player : players) {
+                player.teleport(location, PlayerTeleportEvent.TeleportCause.COMMAND);
             }
             
             return true;

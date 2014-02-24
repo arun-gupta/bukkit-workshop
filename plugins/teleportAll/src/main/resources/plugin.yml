@@ -1,8 +1,8 @@
-name: FlamingPigs
+name: TeleportAll
 version: "1.0-SNAPSHOT"
 author: Arun Gupta
-main: org.devoxx4kids.bukkit.plugins.pigs.MyPlugin
+main: org.devoxx4kids.bukkit.plugins.teleport.MyPlugin
 commands:
-   flamingpigs:
-      description: spawn a certain number of flaming pigs where you are, which are on fire for 30 seconds.
-      usage: /flamingpigs <number of pigs>
+   teleportall:
+      description: teleports all players to your location.
+      usage: /teleportall

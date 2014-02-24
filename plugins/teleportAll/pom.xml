@@ -12,6 +12,6 @@
     </parent>
 
     <!-- Project name -->
-    <artifactId>flamingPigs</artifactId>
+    <artifactId>teleportAll</artifactId>
 </project>
 
