@@ -38,6 +38,10 @@
         <module>flamingPigs</module>
         <module>spongeWater</module>
         <module>template</module>
+        <module>slotMachine</module>
+        <module>createTower</module>
+        <module>throwEgg</module>
+        <module>teleportAll</module>
     </modules>
 </project>
 
