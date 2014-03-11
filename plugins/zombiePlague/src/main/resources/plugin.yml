@@ -1,0 +1,4 @@
+name: zombiePlague
+version: "1.0-SNAPSHOT"
+author: Ryan Michela
+main: org.devoxx4kids.bukkit.plugins.zombiePlague.ZombiePlugin

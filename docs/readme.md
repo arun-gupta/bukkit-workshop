@@ -22,5 +22,5 @@ Level 2 Mods
 
 Level 3 Mods
 ------------
-1. If you get bit by a zombie then you continuously get damaged until you eat cake. If you don’t eat cake and die then a zombie is spawned.
+1. (DONE) If you get bit by a zombie then you continuously get damaged until you eat cake. If you don’t eat cake and die then a zombie is spawned.
 

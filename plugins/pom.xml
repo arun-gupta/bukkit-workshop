@@ -42,6 +42,7 @@
         <module>createTower</module>
         <module>throwEgg</module>
         <module>teleportAll</module>
+        <module>zombiePlague</module>
     </modules>
 </project>
 
