@@ -43,6 +43,8 @@
         <module>throwEgg</module>
         <module>teleportAll</module>
         <module>zombiePlague</module>
+        <module>fillBlocks</module>
+        <module>BiggerTNTExplosions</module>
     </modules>
 </project>
 

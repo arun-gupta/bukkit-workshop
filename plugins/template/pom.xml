@@ -12,6 +12,6 @@
     </parent>
 
     <!-- Project name - update this -->
-    <artifactId>yourPluginName</artifactId>
+    <artifactId>teleportAll</artifactId>
 </project>
 
