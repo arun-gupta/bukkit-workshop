@@ -4,13 +4,13 @@ This is an archetype for creating a Bukkit Plugin. Bukkit Plugins can be used to
 
 == Install the Archetype
 
-. Cloe workspace, build and install archetype
-+
+Clone workspace, build and install archetype
+
 [source,txt]
 ----
 git clone https://github.com/arun-gupta/bukkit-workshop.git
 cd archetype
-mvn clean install
+mvn install
 ----
 
 == Usage
