@@ -19,8 +19,7 @@ mvn clean install
 .. Install JAR by giving the following command:
 [source,txt]
 ----
-mvn install:install-file -Dfile=bukkit-template.jar
--DgroupId=org.devoxx4kids.bukkit.plugins -DartifactId=bukkit-template
+mvn install:install-file -Dfile=bukkit-template.jar -DgroupId=org.devoxx4kids.bukkit.plugins -DartifactId=bukkit-template
 ----
 
 == Usage
@@ -29,19 +28,13 @@ A typical usage to create a Maven project using this archetype is:
 
 [source,text]
 ----
-mvn --batch-mode archetype:generate
-  -DarchetypeGroupId=<archetype-groupId>
-  -DarchetypeArtifactId=<archetype-artifactId>
-  -DartifactId=<my-artifactId>
+mvn --batch-mode archetype:generate -DarchetypeGroupId=<archetype-groupId> -DarchetypeArtifactId=<archetype-artifactId> -DartifactId=<my-artifactId>
 ----
 
 A sample usage is:
 
 [source,text]
 ----
-mvn --batch-mode archetype:generate
-  -DarchetypeGroupId=org.devoxx4kids.bukkit.plugins
-  -DarchetypeArtifactId=bukkit-template
-  -DartifactId=sample
+mvn --batch-mode archetype:generate -DarchetypeGroupId=org.devoxx4kids.bukkit.plugins -DarchetypeArtifactId=bukkit-template -DartifactId=sample
 ----
 
