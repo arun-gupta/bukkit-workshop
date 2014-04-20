@@ -1,2 +1,2 @@
-Bukkit Workshop for Minecraft Modding
-=====================================
+Minecraft Modding using Bukkit
+==============================
