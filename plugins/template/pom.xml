@@ -12,6 +12,6 @@
     </parent>
 
     <!-- Project name - update this -->
-    <artifactId>teleportAll</artifactId>
+    <artifactId>template</artifactId>
 </project>
 
