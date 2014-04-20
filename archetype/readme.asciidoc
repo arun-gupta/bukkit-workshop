@@ -1,6 +1,7 @@
 = Bukkit Plugin Archetype
 
-This is an archetype for creating a Bukkit Plugin. Bukkit Plugins can be used to create a Minecraft Mod.
+This is an archetype for creating a Bukkit Plugin. Bukkit Plugins can
+be used to mod Minecraft.
 
 == Install the Archetype
 
@@ -15,7 +16,8 @@ mvn install
 
 == Usage
 
-Create a new plugin as:
+Make sure this command is not executed from the `archetype` directory. So
+change directory one level up using the command `cd ..` and create a new plugin as:
 
 [source,text]
 ----
