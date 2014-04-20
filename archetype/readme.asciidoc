@@ -15,17 +15,11 @@ mvn install
 
 == Usage
 
-A typical usage to create a Maven project using this archetype is:
-
-[source,text]
-----
-mvn --batch-mode archetype:generate -DarchetypeGroupId=<archetype-groupId> -DarchetypeArtifactId=<archetype-artifactId> -DartifactId=<my-artifactId>
-----
-
-A sample usage is:
+Create a new plugin as:
 
 [source,text]
 ----
 mvn --batch-mode archetype:generate -DarchetypeGroupId=org.devoxx4kids.bukkit.plugins -DarchetypeArtifactId=bukkit-template -DartifactId=sample
 ----
 
+Make sure to change ``sample'' to your plugin name.
