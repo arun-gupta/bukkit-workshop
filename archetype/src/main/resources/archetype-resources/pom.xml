@@ -5,7 +5,6 @@
     <artifactId>${artifactId}</artifactId>
     <groupId>${groupId}</groupId>
     <version>${version}</version>
-    <packaging>pom</packaging>
 
     <!-- Repositories -->
     <repositories>
