@@ -1,0 +1,4 @@
+name: BiggerTNTExplosions
+version: "1.0-SNAPSHOT"
+author: Aditya Gupta
+main: org.aditya.mods.bukkit.biggertnt.MyPlugin
