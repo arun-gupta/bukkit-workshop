@@ -4,12 +4,6 @@ import java.util.logging.Level;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
-    // This code is called only once after the server starts
-    @Override
-    public void onLoad() {
-        getLogger().log(Level.INFO, "{0}.onLoad()", this.getClass().getName());
-    }
-
     // This code is called after the server starts and after the /reload command
     @Override
     public void onEnable() {
