@@ -26,7 +26,7 @@ class MoneyListener implements Listener {
     
     @EventHandler
     public void checkForNullMoney(PlayerJoinEvent event){
-        if(money.get(event.getPlayer()) == null){
+        if (money.containsKey(event.getPlayer())) {
             money.put(event.getPlayer(), 0F);
         }
     }
