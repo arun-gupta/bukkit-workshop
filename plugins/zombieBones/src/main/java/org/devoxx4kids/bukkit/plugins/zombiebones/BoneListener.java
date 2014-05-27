@@ -30,7 +30,7 @@ class BoneListener implements Listener {
         World w = e.getEntity().getWorld();
         
         Random r = new Random();
-        int i = r.nextInt(2);
+        int i = r.nextInt(3);
         
         w.dropItem(l, new ItemStack(Material.BONE, i));
     }
