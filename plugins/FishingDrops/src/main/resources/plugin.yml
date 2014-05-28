@@ -1,0 +1,4 @@
+name: FishingDrops
+version: "1.0-SNAPSHOT"
+author: Your Name
+main: org.aditya.bukkit.plugins.fishingdrops.MyPlugin

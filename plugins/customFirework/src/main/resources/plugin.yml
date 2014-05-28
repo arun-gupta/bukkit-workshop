@@ -1,0 +1,14 @@
+name: ElevatorPlugin
+version: "1.0-SNAPSHOT"
+author: Aditya Gupta
+main: org.devoxx4kids.bukkit.plugins.newblock.MyPlugin
+commands:
+   elevator:
+      description: The Elevator Plugin main command.
+      usage: /elevator [help:version:toggle]
+   up:
+      description: Go up on an elevator.
+      usage: /up
+   down:
+      description: Go down on an elevator.
+      usage: /down
