@@ -13,15 +13,6 @@ public class MyPlugin extends JavaPlugin {
     public void onEnable() {
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
         getServer().getPluginManager().registerEvents(new FishingListener(), this);
-
-        File yml = new File("fishingconfig.yml");
-        if (!yml.exists()) {
-            try {
-                yml.createNewFile();
-            } catch (IOException ex) {
-                Logger.getLogger(MyPlugin.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
     }
 
     // This code is called before the server stops and after the /reload command
