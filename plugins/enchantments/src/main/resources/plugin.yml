@@ -1,0 +1,9 @@
+name: Enchantments
+version: "1.0-SNAPSHOT"
+author: Arun Gupta
+main: org.devoxx4kids.bukkit.plugins.enchantments.MyPlugin
+commands:
+   enchantment:
+      description: allows a higher enchantment level.
+      usage: /enchantment <enchantment> <level>
+      aliases: ench
