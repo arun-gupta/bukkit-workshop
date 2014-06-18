@@ -6,3 +6,4 @@ commands:
    flamingpigs:
       description: spawn a certain number of flaming pigs where you are, which are on fire for 30 seconds.
       usage: /flamingpigs <number of pigs>
+      aliases: fp
