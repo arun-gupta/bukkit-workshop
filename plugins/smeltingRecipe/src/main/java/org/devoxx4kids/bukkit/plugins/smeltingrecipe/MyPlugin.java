@@ -12,8 +12,8 @@ public class MyPlugin extends JavaPlugin {
     public void onEnable() {
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
         FurnaceRecipe recipe = new FurnaceRecipe(
-                new ItemStack(Material.COAL_ORE, 1),
-                Material.COAL
+                new ItemStack(Material.BREAD, 1),
+                Material.CAKE
         );
         getServer().addRecipe(recipe);
     }
