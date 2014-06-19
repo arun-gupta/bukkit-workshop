@@ -20,7 +20,12 @@ public class MyPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
-        enchantments.put("knockback", Enchantment.KNOCKBACK);
+        enchantments.put("arrow_fire", Enchantment.ARROW_FIRE);
+        enchantments.put("arrow_infinite", Enchantment.ARROW_INFINITE);
+        enchantments.put("knowckback", Enchantment.KNOCKBACK);
+        enchantments.put("luck", Enchantment.LUCK);
+        enchantments.put("protection_explosions", Enchantment.PROTECTION_EXPLOSIONS);
+        enchantments.put("durability", Enchantment.DURABILITY);
     }
 
     // This code is called before the server stops and after the /reload command
