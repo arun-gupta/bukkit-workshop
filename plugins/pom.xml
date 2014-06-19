@@ -58,5 +58,6 @@
         <module>BiggerTNTExplosions</module>
         <module>MachineGun</module>
         <module>enchantments</module>
+    <module>smeltingRecipe</module>
   </modules>
 </project>
