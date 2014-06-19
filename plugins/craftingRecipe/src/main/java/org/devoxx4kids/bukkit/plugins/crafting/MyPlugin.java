@@ -7,7 +7,9 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
+
     // This code is called only once after the server starts
+
     @Override
     public void onLoad() {
         getLogger().log(Level.INFO, "{0}.onLoad()", this.getClass().getName());
@@ -16,13 +18,13 @@ public class MyPlugin extends JavaPlugin {
     // This code is called after the server starts and after the /reload command
     @Override
     public void onEnable() {
-            getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
-        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.POTATO_ITEM, 1))
-                .shape("ded", "lnl", "ded")
-                .setIngredient('d', Material.DIAMOND)
-                .setIngredient('e', Material.EMERALD)
-                .setIngredient('l', Material.LAPIS_BLOCK)
-                .setIngredient('n', Material.NETHER_STAR);
+        getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
+        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.COOKIE, 1))
+                .shape("wsw", "wmw", "wcw")
+                .setIngredient('w', Material.WHEAT)
+                .setIngredient('s', Material.SUGAR)
+                .setIngredient('c', Material.COCOA)
+                .setIngredient('m', Material.MILK_BUCKET);
         getServer().addRecipe(recipe);
     }
 
