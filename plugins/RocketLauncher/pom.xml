@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-    <artifactId>MachineGun</artifactId>
+    <artifactId>RocketLauncher</artifactId>
     <groupId>org.aditya.bukkit.plugins</groupId>
     <version>1.0-SNAPSHOT</version>
     
@@ -54,4 +54,5 @@
             </plugin>
         </plugins>
     </build>
+    <name>RocketLauncher</name>
 </project>

@@ -1,4 +1,4 @@
 name: MachineGun
 version: "1.0-SNAPSHOT"
 author: Your Name
-main: org.aditya.bukkit.plugins.machinegun.MyPlugin
+main: org.aditya.bukkit.plugins.rocketlauncher.MyPlugin

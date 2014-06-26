@@ -1,7 +1,7 @@
 /**
  * Copyright: Aditya Gupta
  */
-package org.aditya.bukkit.plugins.machinegun;
+package org.aditya.bukkit.plugins.rocketlauncher;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,14 +21,14 @@ import org.bukkit.event.player.PlayerJoinEvent;
 /**
  * @author Aditya Gupta
  */
-class MachineGunListener implements Listener {
+class RocketLauncherListener implements Listener {
 
-    Map<Player, Boolean> safety = new HashMap<>();
+    Map<String, Boolean> safety = new HashMap<>();
     
     @EventHandler
     public void checkForNewPlayer(PlayerJoinEvent e){
-        if (!(safety.containsKey(e.getPlayer()))) {
-            safety.put(e.getPlayer(), true);
+        if (!(safety.containsKey(e.getPlayer().getName()))) {
+            safety.put(e.getPlayer().getName(), true);
         }
     }
 
@@ -42,11 +42,11 @@ class MachineGunListener implements Listener {
                 return;
             }
             
-            if(safety.get(p)){
-                safety.put(p, false);
+            if(safety.get(p.getName())){
+                safety.put(p.getName(), false);
                 p.sendMessage(ChatColor.AQUA + "Safety is now OFF.");
             } else {
-                safety.put(p, true);
+                safety.put(p.getName(), true);
                 p.sendMessage(ChatColor.AQUA + "Safety is now ON.");
             }
             
@@ -56,7 +56,7 @@ class MachineGunListener implements Listener {
         if (e.getAction() != Action.RIGHT_CLICK_AIR && e.getAction() != Action.RIGHT_CLICK_BLOCK) {
             return;
         }
-        if(p.getItemInHand().getType() != Material.DIAMOND_BARDING || safety.get(p) == true){
+        if(p.getItemInHand().getType() != Material.DIAMOND_BARDING || safety.get(p.getName()) == true){
             return;
         }
             
