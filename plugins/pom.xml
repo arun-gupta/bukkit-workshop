@@ -72,7 +72,7 @@
         <module>teleportAll</module>
         <module>zombiePlague</module>
         <module>BiggerTNTExplosions</module>
-        <module>MachineGun</module>
+        <module>RocketLauncher</module>
         <module>enchantments</module>
         <module>smeltingRecipe</module>
     </modules>
