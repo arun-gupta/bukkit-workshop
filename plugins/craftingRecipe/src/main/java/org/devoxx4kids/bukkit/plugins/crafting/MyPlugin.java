@@ -16,13 +16,13 @@ public class MyPlugin extends JavaPlugin {
     // This code is called after the server starts and after the /reload command
     @Override
     public void onEnable() {
-            getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
-        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.POTATO_ITEM, 1))
+          getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
+        ShapedRecipe recipe = new ShapedRecipe(new ItemStack(Material.NETHER_STAR, 1))
                 .shape("ded", "lnl", "ded")
-                .setIngredient('d', Material.DIAMOND)
+                .setIngredient('d', Material.DIAMOND_BLOCK)
                 .setIngredient('e', Material.EMERALD)
                 .setIngredient('l', Material.LAPIS_BLOCK)
-                .setIngredient('n', Material.NETHER_STAR);
+                .setIngredient('n', Material.REDSTONE_BLOCK);
         getServer().addRecipe(recipe);
     }
 

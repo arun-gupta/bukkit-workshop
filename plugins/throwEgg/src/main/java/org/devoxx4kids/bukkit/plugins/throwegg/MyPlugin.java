@@ -1,17 +1,16 @@
-package org.devoxx4kids.bukkit.plugins.tower;
+package org.devoxx4kids.bukkit.plugins.throwegg;
 
 import java.util.logging.Level;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MyPlugin extends JavaPlugin {
     // This code is called only once after the server starts
     
-    public static EntityType entitytype;
+    public static EntityType entityType;
     public static int numberOfEntities;
 
     @Override
@@ -38,17 +37,15 @@ public class MyPlugin extends JavaPlugin {
         if (!(cmd.getName().equals("eggconfig"))) {
             return false;
         }
-        if (!(sender instanceof Player)) {
+        if (args.length != 2) {
+            sender.sendMessage(ChatColor.DARK_RED + cmd.getUsage());
             return false;
         }
-        if (args.length != 2) {
-            sender.sendMessage("Usage: /eggconfig <entity to hatch> <number of entities to hatch>");
-        }
         
-        entitytype = EntityType.valueOf(args[0].toString().toUpperCase());
+        entityType = EntityType.valueOf(args[0].toString().toUpperCase());
         numberOfEntities = Integer.parseInt(args[1].toString());
         
-        sender.sendMessage(ChatColor.GREEN + "Eggs will now hatch " + numberOfEntities + " " + entitytype + "s.");
+        sender.sendMessage(ChatColor.GREEN + "Eggs will now hatch " + numberOfEntities + " " + entityType + "(s).");
         
         return true;
     }

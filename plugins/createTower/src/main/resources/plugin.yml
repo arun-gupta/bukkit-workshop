@@ -1,8 +1,8 @@
 name: createTower
 version: "1.0-SNAPSHOT"
 author: Aditya Gupta
-main: org.devoxx4kids.bukkit.plugins.tower.MyPlugin
+main: org.devoxx4kids.bukkit.plugins.towerbuilder.MyPlugin
 commands:
-   tower:
-      description: make a tower of <material> that is <height> blocks tall.
-      usage: /tower <material> <height>
+  tower:
+    description: make a tower of <material> that is <height> blocks tall.
+    usage: /tower <material> <height>

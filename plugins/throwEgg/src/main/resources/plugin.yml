@@ -1,8 +1,9 @@
 name: throwEgg
 version: "1.0-SNAPSHOT"
 author: Aditya Gupta
-main: org.devoxx4kids.bukkit.plugins.tower.MyPlugin
+main: org.devoxx4kids.bukkit.plugins.throwegg.MyPlugin
 commands:
    eggconfig:
       description: control what hatches from an egg and how many of it hatches.
       usage: /eggconfig <entity to hatch> <number of entities to hatch>
+      aliases: ec

@@ -13,5 +13,6 @@
 
     <!-- Project name - update this -->
     <artifactId>createTower</artifactId>
+    <name>TowerBuilder</name>
 </project>
 

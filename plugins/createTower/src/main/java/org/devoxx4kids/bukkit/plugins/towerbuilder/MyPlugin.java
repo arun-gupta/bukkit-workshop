@@ -1,4 +1,4 @@
-package org.devoxx4kids.bukkit.plugins.tower;
+package org.devoxx4kids.bukkit.plugins.towerbuilder;
 
 import java.util.logging.Level;
 import org.bukkit.ChatColor;

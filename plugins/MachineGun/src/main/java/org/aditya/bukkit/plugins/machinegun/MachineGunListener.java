@@ -36,7 +36,12 @@ class MachineGunListener implements Listener {
     public void fireGun(PlayerInteractEvent e) {
         Player p = e.getPlayer();
         
-        if(e.getAction() == Action.LEFT_CLICK_AIR){
+        if(e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK){
+            
+            if(e.getPlayer().getItemInHand().getType() != Material.DIAMOND_BARDING){
+                return;
+            }
+            
             if(safety.get(p)){
                 safety.put(p, false);
                 p.sendMessage(ChatColor.AQUA + "Safety is now OFF.");
@@ -48,9 +53,13 @@ class MachineGunListener implements Listener {
             return;
         }
         
-        if (e.getAction() != Action.RIGHT_CLICK_AIR || p.getItemInHand().getType() != Material.DIAMOND_BARDING || safety.get(p) == true) {
+        if (e.getAction() != Action.RIGHT_CLICK_AIR && e.getAction() != Action.RIGHT_CLICK_BLOCK) {
             return;
         }
+        if(p.getItemInHand().getType() != Material.DIAMOND_BARDING || safety.get(p) == true){
+            return;
+        }
+            
         Fireball f = e.getPlayer().launchProjectile(Fireball.class);
         f.setIsIncendiary(false);
     }

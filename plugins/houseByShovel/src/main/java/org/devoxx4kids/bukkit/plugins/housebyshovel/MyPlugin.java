@@ -1,4 +1,4 @@
-package org.devoxx4kids.bukkit.plugins.house;
+package org.devoxx4kids.bukkit.plugins.housebyshovel;
 
 import java.util.logging.Level;
 import org.bukkit.plugin.java.JavaPlugin;

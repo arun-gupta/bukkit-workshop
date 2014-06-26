@@ -1,4 +1,4 @@
-package org.devoxx4kids.bukkit.plugins.sponge;
+package org.devoxx4kids.bukkit.plugins.spongewater;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
