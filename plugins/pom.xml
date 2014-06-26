@@ -42,7 +42,7 @@
                 <artifactId>maven-antrun-plugin</artifactId>
                 <configuration>
                     <tasks>
-                        <copy file="target/${project.artifactId}-${project.version}.jar" todir="/Users/arungupta/tools/bukkit/plugins" />
+                        <copy file="target/${project.artifactId}-${project.version}.jar" todir="/Users/arungupta/tools/bukkit/plugins"/>
                     </tasks>
                 </configuration>
                 <executions>
@@ -75,5 +75,6 @@
         <module>RocketLauncher</module>
         <module>enchantments</module>
         <module>smeltingRecipe</module>
-    </modules>
+    <module>scheduler</module>
+  </modules>
 </project>
