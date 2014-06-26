@@ -12,7 +12,7 @@
     </parent>
 
     <!-- Project name - update this -->
-    <artifactId>createTower</artifactId>
+    <artifactId>TowerBuilder</artifactId>
     <name>TowerBuilder</name>
 </project>
 

@@ -58,22 +58,21 @@
     </build>
     
     <modules>
+        <module>sample</module>
         <module>PlayerEntryExit</module>
         <module>BlockMoney</module>
         <module>zombieBones</module>
-        <module>flamingPigs</module>
-        <module>spongeWater</module>
-        <module>createTower</module>
-        <module>throwEgg</module>
         <module>BiggerTNTExplosions</module>
+        <module>flamingPigs</module>
+        <module>throwEgg</module>
+        <module>spongeWater</module>
+        <module>TowerBuilder</module>
         
         <module>craftingRecipe</module>
-        <module>RocketLauncher</module>
-        <module>enchantments</module>
         <module>smeltingRecipe</module>
-        <module>scheduler</module>
+        <module>enchantments</module>
         <module>WarpBoard</module>
         <module>TNTMagnet</module>
-        <module>sample</module>
+        <module>RocketLauncher</module>
     </modules>
 </project>
