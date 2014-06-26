@@ -58,23 +58,22 @@
     </build>
     
     <modules>
-        <module>TNTLeafCreeper</module>
-        <module>craftingRecipe</module>
-        <module>houseByShovel</module>
-        <module>lightningByFire</module>
+        <module>PlayerEntryExit</module>
+        <module>BlockMoney</module>
         <module>zombieBones</module>
         <module>flamingPigs</module>
         <module>spongeWater</module>
-        <module>template</module>
-        <module>slotMachine</module>
         <module>createTower</module>
         <module>throwEgg</module>
-        <module>teleportAll</module>
-        <module>zombiePlague</module>
         <module>BiggerTNTExplosions</module>
+        
+        <module>craftingRecipe</module>
         <module>RocketLauncher</module>
         <module>enchantments</module>
         <module>smeltingRecipe</module>
-    <module>scheduler</module>
-  </modules>
+        <module>scheduler</module>
+        <module>WarpBoard</module>
+        <module>TNTMagnet</module>
+        <module>sample</module>
+    </modules>
 </project>
