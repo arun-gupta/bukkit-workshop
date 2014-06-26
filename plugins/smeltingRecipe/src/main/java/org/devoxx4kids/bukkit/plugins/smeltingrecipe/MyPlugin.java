@@ -11,11 +11,7 @@ public class MyPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
-        FurnaceRecipe recipe = new FurnaceRecipe(
-                new ItemStack(Material.BREAD, 1),
-                Material.CAKE
-        );
-        getServer().addRecipe(recipe);
+        getServer().addRecipe(new FurnaceRecipe(new ItemStack(Material.DRAGON_EGG), Material.EGG));
     }
 
     // This code is called before the server stops and after the /reload command
