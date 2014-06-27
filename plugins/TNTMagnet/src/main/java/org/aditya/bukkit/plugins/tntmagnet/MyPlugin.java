@@ -8,7 +8,7 @@ public class MyPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
-        getServer().getPluginManager().registerEvents(new TNTListener(), this);
+        getServer().getPluginManager().registerEvents(new TNTListener(this), this);
     }
 
     // This code is called before the server stops and after the /reload command
