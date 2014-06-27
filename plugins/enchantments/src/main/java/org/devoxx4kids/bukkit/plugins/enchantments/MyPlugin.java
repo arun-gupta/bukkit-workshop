@@ -20,12 +20,30 @@ public class MyPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().log(Level.INFO, "{0}.onEnable()", this.getClass().getName());
-        enchantments.put("arrow_fire", Enchantment.ARROW_FIRE);
-        enchantments.put("arrow_infinite", Enchantment.ARROW_INFINITE);
-        enchantments.put("knowckback", Enchantment.KNOCKBACK);
-        enchantments.put("luck", Enchantment.LUCK);
-        enchantments.put("protection_explosions", Enchantment.PROTECTION_EXPLOSIONS);
-        enchantments.put("durability", Enchantment.DURABILITY);
+        enchantments.put("power", Enchantment.ARROW_DAMAGE);
+        enchantments.put("flame", Enchantment.ARROW_FIRE);
+        enchantments.put("infinity", Enchantment.ARROW_INFINITE);
+        enchantments.put("punch", Enchantment.ARROW_KNOCKBACK);
+        enchantments.put("sharpness", Enchantment.DAMAGE_ALL);
+        enchantments.put("bane_of_arthropods", Enchantment.DAMAGE_ARTHROPODS);
+        enchantments.put("smite", Enchantment.DAMAGE_UNDEAD);
+        enchantments.put("efficiency", Enchantment.DIG_SPEED);
+        enchantments.put("unbreaking", Enchantment.DURABILITY);
+        enchantments.put("fire_aspect", Enchantment.FIRE_ASPECT);
+        enchantments.put("knockback", Enchantment.KNOCKBACK);
+        enchantments.put("fortune", Enchantment.LOOT_BONUS_BLOCKS);
+        enchantments.put("looting", Enchantment.LOOT_BONUS_MOBS);
+        enchantments.put("luck_of_the_sea", Enchantment.LUCK);
+        enchantments.put("lure", Enchantment.LURE);
+        enchantments.put("respiration", Enchantment.OXYGEN);
+        enchantments.put("protection", Enchantment.PROTECTION_ENVIRONMENTAL);
+        enchantments.put("blast_protection", Enchantment.PROTECTION_EXPLOSIONS);
+        enchantments.put("feather_falling", Enchantment.PROTECTION_FALL);
+        enchantments.put("fire_protection", Enchantment.PROTECTION_FIRE);
+        enchantments.put("projectile_protection", Enchantment.PROTECTION_PROJECTILE);
+        enchantments.put("silk_touch", Enchantment.SILK_TOUCH);
+        enchantments.put("thorns", Enchantment.THORNS);
+        enchantments.put("aqua_affinity", Enchantment.WATER_WORKER);
     }
 
     // This code is called before the server stops and after the /reload command
@@ -36,7 +54,7 @@ public class MyPlugin extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (!cmd.getName().equals("enchantment")) {
+        if (!cmd.getName().equals("highenchant")) {
             return false;
         }
         if (!(sender instanceof Player)) {
@@ -44,7 +62,8 @@ public class MyPlugin extends JavaPlugin {
         }
         
         if (args.length != 2) {
-            sender.sendMessage(ChatColor.DARK_RED + cmd.getUsage());
+            ((Player) sender).sendMessage(ChatColor.DARK_RED + cmd.getUsage());
+            return true;
         }
         
         if (!enchantments.containsKey(args[0])) {
@@ -55,6 +74,9 @@ public class MyPlugin extends JavaPlugin {
         
         ItemStack itemStack = ((Player) sender).getItemInHand();
         itemStack.addUnsafeEnchantment(enchantments.get(args[0]), level);
+        
+        ((Player) sender).sendMessage(ChatColor.GOLD + "You have enchanted your item with " + ChatColor.GREEN 
+                + args[0] + ChatColor.GOLD + " at level " + ChatColor.GREEN + level + ChatColor.GOLD + ".");
         
         return true;
     }

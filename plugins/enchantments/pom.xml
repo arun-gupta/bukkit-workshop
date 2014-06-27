@@ -40,7 +40,7 @@
                 <artifactId>maven-antrun-plugin</artifactId>
                 <configuration>
                     <tasks>
-                        <copy file="target/enchantments-1.0-SNAPSHOT.jar" todir="/Users/arungupta/tools/bukkit/plugins" />
+                        <copy file="target/enchantments-1.0-SNAPSHOT.jar" todir="C:\Users\Aditya\Desktop\craftbukkit\plugins" />
                     </tasks>
                 </configuration>
                 <executions>
