@@ -40,10 +40,24 @@ public class MyPlugin extends JavaPlugin {
         }
         if (args.length != 2) {
             sender.sendMessage("Usage: /tower <material> <height>");
+            return false;
         }
 
-        Material material = Material.getMaterial(args[0].toString().toUpperCase());
-        int height = Integer.parseInt(args[1]);
+        Material material = Material.matchMaterial(args[0]);
+        
+        if(material == null){
+            sender.sendMessage(ChatColor.RED + args[0] + ChatColor.DARK_RED + " is not a valid material!");
+            return false;
+        }
+        
+        int height;
+        
+        try{
+            height = Integer.parseInt(args[1]);
+        } catch (NumberFormatException nfe){
+            sender.sendMessage(ChatColor.RED + args[1] + ChatColor.DARK_RED + " is not a valid number!");
+            return false;
+        }
 
         int x = ((Player) sender).getLocation().getBlockX();
         int y = ((Player) sender).getLocation().getBlockY();
@@ -63,17 +77,17 @@ public class MyPlugin extends JavaPlugin {
         Block block;
         World world = ((Player) sender).getWorld();
 
-        int l = 0;
+        int layer = 0;
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < tower.length; j += 3) {
-                block = world.getBlockAt(tower[j], tower[j + 1] + l, tower[j + 2]);
+                block = world.getBlockAt(tower[j], tower[j + 1] + layer, tower[j + 2]);
                 block.setType(material);
             }
-            l++;
+            layer++;
         }
 
-        sender.sendMessage(ChatColor.GREEN + "You made a tower of " + material.toString() + " that is " + height + " blocks high.");
+        sender.sendMessage(ChatColor.GREEN + "You made a tower of " + material + " that is " + height + " blocks high.");
         return true;
     }
 }

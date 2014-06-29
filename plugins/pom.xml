@@ -42,7 +42,7 @@
                 <artifactId>maven-antrun-plugin</artifactId>
                 <configuration>
                     <tasks>
-                        <copy file="target/${project.artifactId}-${project.version}.jar" todir="/Users/arungupta/tools/bukkit/plugins"/>
+                        <copy file="target/${project.artifactId}-${project.version}.jar" todir="C:/Users/Aditya/Desktop/craftbukkit/plugins"/>
                     </tasks>
                 </configuration>
                 <executions>

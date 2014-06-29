@@ -12,6 +12,7 @@
     </parent>
 
     <!-- Project name - update this -->
-    <artifactId>spongeWater</artifactId>
+    <artifactId>SpongeWater</artifactId>
+    <name>SpongeWater</name>
 </project>
 
