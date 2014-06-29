@@ -1,6 +1,3 @@
-/**
- * Copyright: Aditya Gupta
- */
 package org.devoxx4kids.bukkit.plugins.zombiebones;
 
 import java.util.Random;

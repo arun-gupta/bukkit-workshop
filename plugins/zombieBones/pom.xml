@@ -12,6 +12,7 @@
     </parent>
 
     <!-- Project name -->
-    <artifactId>zombieBones</artifactId>
+    <artifactId>ZombieBones</artifactId>
+    <name>ZombieBones</name>
 </project>
 
