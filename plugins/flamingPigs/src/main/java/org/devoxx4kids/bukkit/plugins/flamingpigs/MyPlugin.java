@@ -40,7 +40,14 @@ public class MyPlugin extends JavaPlugin {
             return false;
         }
 
-        int numberOfPigs = Integer.parseInt(args[0]);
+        int numberOfPigs;
+        
+        try{
+            numberOfPigs = Integer.parseInt(args[0]);
+        } catch (NumberFormatException nfe){
+            sender.sendMessage(ChatColor.RED + args[1] + ChatColor.DARK_RED + " is not a valid number!");
+            return false;
+        }
 
         for (int i = 0; i < numberOfPigs; i++) {
             Entity pig = ((Player) sender).getWorld().spawnEntity(location, EntityType.PIG);

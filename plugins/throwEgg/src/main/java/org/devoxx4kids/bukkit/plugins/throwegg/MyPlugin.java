@@ -42,8 +42,19 @@ public class MyPlugin extends JavaPlugin {
             return false;
         }
         
-        entityType = EntityType.valueOf(args[0].toString().toUpperCase());
-        numberOfEntities = Integer.parseInt(args[1].toString());
+        try{
+            entityType = EntityType.valueOf(args[0].toString().toUpperCase());
+        } catch (NullPointerException npe){
+            sender.sendMessage(ChatColor.RED + entityType.toString() + ChatColor.DARK_RED + " is not a valid entity!");
+            return false;
+        }
+        
+        try{
+            numberOfEntities = Integer.parseInt(args[0]);
+        } catch (NumberFormatException nfe){
+            sender.sendMessage(ChatColor.RED + args[1] + ChatColor.DARK_RED + " is not a valid number!");
+            return false;
+        }
         
         sender.sendMessage(ChatColor.GREEN + "Eggs will now hatch " + numberOfEntities + " " + entityType + "(s).");
         

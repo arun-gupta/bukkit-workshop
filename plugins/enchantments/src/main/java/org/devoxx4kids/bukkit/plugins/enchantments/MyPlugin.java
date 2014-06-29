@@ -70,7 +70,14 @@ public class MyPlugin extends JavaPlugin {
             return false;
         }
         
-        int level = Integer.parseInt(args[1]);
+        int level;
+        
+        try{
+            level = Integer.parseInt(args[1]);
+        } catch (NumberFormatException nfe){
+            sender.sendMessage(ChatColor.RED + args[1] + ChatColor.DARK_RED + " is not a valid number!");
+            return false;
+        }   
         
         ItemStack itemStack = ((Player) sender).getItemInHand();
         itemStack.addUnsafeEnchantment(enchantments.get(args[0]), level);
