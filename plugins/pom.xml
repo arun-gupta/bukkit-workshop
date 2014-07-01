@@ -74,5 +74,6 @@
         <module>WarpBoard</module>
         <module>TNTMagnet</module>
         <module>RocketLauncher</module>
-    </modules>
+    <module>SpleefMinigame</module>
+  </modules>
 </project>

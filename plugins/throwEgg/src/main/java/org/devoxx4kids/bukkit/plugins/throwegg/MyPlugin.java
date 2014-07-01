@@ -50,7 +50,7 @@ public class MyPlugin extends JavaPlugin {
         }
         
         try{
-            numberOfEntities = Integer.parseInt(args[0]);
+            numberOfEntities = Integer.parseInt(args[1]);
         } catch (NumberFormatException nfe){
             sender.sendMessage(ChatColor.RED + args[1] + ChatColor.DARK_RED + " is not a valid number!");
             return false;
