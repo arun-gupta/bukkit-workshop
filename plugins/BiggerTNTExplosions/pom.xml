@@ -11,6 +11,17 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+        </dependency>
+    </dependencies>
+
     <!-- Project name -->
     <artifactId>BiggerTNTExplosions</artifactId>
 </project>
