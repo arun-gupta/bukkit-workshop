@@ -1,7 +1,4 @@
-/**
- * Copyright: Aditya Gupta
- */
-package org.aditya.mods.bukkit.biggertnt;
+package org.devoxx4kids.spigot.plugins.biggertnt;
 
 import org.bukkit.Location;
 import org.bukkit.World;

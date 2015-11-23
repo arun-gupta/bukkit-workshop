@@ -1,7 +1,7 @@
     /**
  * Copyright: Aditya Gupta
  */
-package org.aditya.bukkit.plugins.tntmagnet;
+package org.devoxx4kids.spigot.plugins.tntmagnet;
 
 import java.util.List;
 import org.bukkit.ChatColor;
@@ -22,9 +22,9 @@ import org.bukkit.event.block.BlockPlaceEvent;
  */
 class TNTListener implements Listener {
     
-    private final MyPlugin plugin;
+    private final TNTMagnet plugin;
     
-    public TNTListener(MyPlugin plugin) {
+    public TNTListener(TNTMagnet plugin) {
         this.plugin = plugin;
     }
 

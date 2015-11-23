@@ -1,7 +1,7 @@
 /**
  * Copyright: Aditya Gupta
  */
-package org.aditya.bukkit.plugins.rocketlauncher;
+package org.devoxx4kids.spigot.plugins.rocketlauncher;
 
 import java.util.HashMap;
 import java.util.Map;

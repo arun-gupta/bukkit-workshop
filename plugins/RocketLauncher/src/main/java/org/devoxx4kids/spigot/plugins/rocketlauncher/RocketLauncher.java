@@ -1,9 +1,9 @@
-package org.aditya.bukkit.plugins.rocketlauncher;
+package org.devoxx4kids.spigot.plugins.rocketlauncher;
 
 import java.util.logging.Level;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class MyPlugin extends JavaPlugin {
+public class RocketLauncher extends JavaPlugin {
     // This code is called after the server starts and after the /reload command
     @Override
     public void onEnable() {

@@ -1,4 +1,4 @@
-package org.aditya.bukkit.plugins.tntmagnet;
+package org.devoxx4kids.spigot.plugins.tntmagnet;
 
 import java.util.List;
 import org.bukkit.ChatColor;
@@ -22,6 +22,7 @@ public class TNTTask extends BukkitRunnable {
     private int counter;
     Player p;
     Block b;
+    private final float radius = 50.0F;
 
     public TNTTask(JavaPlugin plugin, int counter, Player p, Block b) {
         System.out.println("MyTask.ctor: " + counter);
@@ -41,29 +42,33 @@ public class TNTTask extends BukkitRunnable {
         if (counter > 0) {
             p.sendMessage(ChatColor.GOLD + "Detonating in " + ChatColor.DARK_PURPLE + counter-- + ChatColor.GOLD + " seconds!");
         } else {
-            p.sendMessage(ChatColor.GOLD + "Your " + ChatColor.RED + "TNT Magnet " + 
-                ChatColor.GOLD + "has detonated!");
-            
-            Entity bat = b.getWorld().spawnEntity(new Location(b.getWorld(), b.getX() + 0.5
-                , b.getY() + 0.5, b.getZ() + 0.5), EntityType.BAT);
-        
-        List<Entity> entitylist = ((LivingEntity) bat).getNearbyEntities(4.0, 4.0, 4.0);
-        
-        bat.remove();
-        
-        for(int i = 0 ; i < entitylist.toArray().length ; i++){
-            entitylist.get(i).teleport(new Location(b.getWorld(), b.getX() + 0.5
-                , b.getY() + 0.5, b.getZ() + 0.5));
-        }
-        
-        b.setType(Material.AIR);
-        
-        TNTPrimed tnt = (TNTPrimed) b.getWorld().spawnEntity(new Location(b.getWorld(), b.getX() + 0.5
-                , b.getY() + 0.5, b.getZ()), EntityType.PRIMED_TNT);
-        
-        tnt.setFuseTicks(0);
-            
+            p.sendMessage(ChatColor.GOLD + "Your " + ChatColor.RED + "TNT Magnet "
+                    + ChatColor.GOLD + "has detonated!");
+
+            b.setType(Material.AIR);
+
+            TNTPrimed tnt = (TNTPrimed) b.getWorld().spawnEntity(new Location(b.getWorld(), b.getX() + 0.5, b.getY() + 0.5, b.getZ()), EntityType.PRIMED_TNT);
+
+            tnt.setFuseTicks(0);
+
             this.cancel();
+        }
+
+        if (counter == 1) {
+            Entity bat = b.getWorld().spawnEntity(new Location(b.getWorld(), b.getX() + 0.5, b.getY() + 0.5, b.getZ() + 0.5), EntityType.BAT);
+
+            List<Entity> entitylist = ((LivingEntity) bat).getNearbyEntities(radius, radius, radius);
+
+            for (int i = 0; i < entitylist.toArray().length; i++) {
+
+                if (entitylist.get(i) instanceof Player) {
+                    continue;
+                }
+
+                entitylist.get(i).teleport(new Location(b.getWorld(), b.getX() + 0.5, b.getY() + 0.5, b.getZ() + 0.5));
+            }
+
+            bat.remove();
         }
     }
 }
